@@ -1,0 +1,23 @@
+runtime: "container"
+build:
+  dockerfile: "docker/Dockerfile"
+  dockerBuildPath: "docker/"
+startCommand:
+  type: "http"
+  configSchema:
+    type: "object"
+    properties:
+      apiKey:
+        type: "string"
+        description: "Path to the OpenAI API key file"
+    required: ["apiKey"]
+commandFunction: 
+  |-
+  (config) => ({command: 'docker run',
+    args: [
+      '-i', '--rm',
+      '-p', '8000:8000',
+      'vipermcp:latest'
+    ]})
+exampleConfig:
+  apiKey: "sk-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"

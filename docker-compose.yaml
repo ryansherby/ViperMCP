@@ -1,0 +1,20 @@
+version: "0.1.0"
+services: 
+  vipermcp:
+    image: "vipermcp:latest"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: "vipermcp"
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      OPENAI_API_KEY_PATH: /run/secrets/openai_api.key
+      NVIDIA_VISIBLE_DEVICES: all
+      NVIDIA_DRIVER_CAPABILITIES: all
+    volumes:
+      - type: bind
+        source: ./api.key
+        target: /run/secrets/openai_api.key
+        read_only: true

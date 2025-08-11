@@ -1,0 +1,86 @@
+multiprocessing: False
+
+root: ${root:}
+
+use_cache: False
+
+crop_larger_margin: True  # Increase size of crop by 10px to include more context
+
+useful_lists_path: ${root:}/src/useful_lists
+
+
+load_models:
+    glip: False
+    midas: True
+    blip: False
+    xvlm: True
+    codex: True
+    codellama: False
+    gpt4: True
+    gpt4_guess: True
+    gpt4_qa: True
+    gpt4_general: True
+    dino: True
+    sam: True
+    gpt4vlm: True
+    gpt4codex: True
+    o3codex: False
+    bert: True
+
+use_local_models: True  # If True, will use local models instead of downloading them;
+# Not available for all models, but will use local models if available.
+
+
+llm:
+  n_votes: 1 # NOTE: Due to changes in OpenAI API, this now makes N individual requests instead of a single request with N messages.
+  qa_prompt: ${root:}/src/prompts/llm/qa_prompt.txt
+  guess_prompt: ${root:}/src/prompts/llm/guess_prompt.txt
+  temperature: 0.0
+  model: gpt-4o-mini
+  path: None
+  name: gpt4
+  api: responses # Options: completions, responses
+
+codex:
+  model: gpt-4.1
+  temperature: 0.0
+  path: None
+  name: gpt4codex
+  prompt: ${root:}/src/prompts/codex/codex.prompt
+  task_prompt: ${root:}/src/prompts/codex/task.prompt
+  query_prompt: ${root:}/src/prompts/codex/query.prompt
+  api: responses # Options: completions, responses
+
+object_segmentation:
+  model: facebook/sam-vit-base
+  path: ${pretrained_models_path:}/sam
+  name: sam
+
+object_captioning:
+  model: gpt-4o-mini
+  path: None
+  half_precision: True
+  name: gpt4vlm
+  temperature: 0.0
+
+object_detection:
+  model: IDEA-Research/grounding-dino-base
+  path: ${pretrained_models_path:}/dino
+  detection_threshold: 0.39
+  name: dino
+
+object_recognition:
+  model: xvlm
+  path: ${pretrained_models_path:}/xvlm
+  detection_threshold: 0.45
+  name: xvlm
+
+depth_estimation:
+  model: intel/dpt-hybrid-midas
+  path: ${pretrained_models_path:}/midas
+  name: midas
+
+text_encoder:
+  model: bert-base-uncased
+  path: ${pretrained_models_path:}/bert
+  name: bert

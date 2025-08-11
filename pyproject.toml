@@ -1,0 +1,11 @@
+[project]
+name = "viper"
+version = "0.1.0"
+description = "A model context protocol for the ViperGPT visual question-answering framework."
+
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.sdist]
+exclude = ["**/pretrained_models/**"]

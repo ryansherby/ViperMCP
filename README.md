@@ -45,7 +45,7 @@ If your container provisioner (e.g., cloud provider) allows you to create enviro
 
 Clone the repository to your local device by running the following comand:
 ```
-git clone --recurse-submodules https://github.com/ryansherby/vipermcp.git
+git clone --recurse-submodules https://github.com/ryansherby/ViperMCP.git
 ```
 
 After cloning, we need to download the pretrained models and set our OpenAI API key. Run the following commands:

@@ -18,10 +18,6 @@ The address provided by ngrok (or any public facing address) can be used as a su
 
 # Installation
 
-## Smithery Deployment
-
-ViperMCP can be deployed through [Smithery](https://smithery.ai/docs/build/deployments#custom-deploy).
-
 ## Dockerized FastMCP Server
 
 Add your OpenAI API key to a file called `api.key`. In the command below, point the mount 

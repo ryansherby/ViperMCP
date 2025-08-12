@@ -133,6 +133,26 @@ response = client.responses.create(
 )
 ```
 
+# Endpoints
+
+## HTTP Get Endpoints
+```
+http://0.0.0.0:8000/health => 'OK', 200
+
+http://0.0.0.0:8000/device => {'cuda','mps',cpu'}
+
+http://0.0.0.0:8000/mcp?apiKey=sk-xxxx => 'Query parameters set successfully.'
+```
+
+## MCP Client Endponts
+
+```
+http://0.0.0.0:8000/mcp/
+# JSON-RPC 2.0
+```
+
+
+
 # Appendix
 
 ## Models

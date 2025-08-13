@@ -146,9 +146,19 @@ http://0.0.0.0:8000/mcp?apiKey=sk-xxxx => 'Query parameters set successfully.'
 
 ## MCP Client Endponts
 
+### Main MCP Endpoint
 ```
 http://0.0.0.0:8000/mcp/
 # JSON-RPC 2.0
+```
+
+### MCP Tooling
+```
+viper_query(query, image) => str
+# Returns a text response to a query.
+
+viper_task(task, image) => list[Image]
+# Returns a list of images that satisfy the task.
 ```
 
 

@@ -13,7 +13,7 @@ ViperMCP is a **mixture-of-experts (MoE) visual question‑answering** (VQA) ser
 * 🧩 **Compositional image QA**
 * 🌐 **External knowledge‑dependent image QA**
 
-It’s built on the shoulders of 🐍 **[ViperGPT](https://viper.cs.columbia.edu/)** and delivered as a **[FastMCP](https://gofastmcp.com/getting-started/welcome)** HTTP server, so it **just works** with all FastMCP client tooling.
+It’s built on the shoulders of 🐍 **[ViperGPT](https://viper.cs.columbia.edu/)** and delivered as a **[FastMCP](https://gofastmcp.com/getting-started/welcome)** HTTP server, so it works with all FastMCP client tooling.
 
 ---
 

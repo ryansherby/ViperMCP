@@ -140,7 +140,7 @@ async with client:
 
 ### 🧵 OpenAI API (MCP Integration)
 
-> ℹ️ The OpenAI MCP integration currently accepts **image URLs** (not raw base64). Send the URL as `type: "input_text"`.
+The OpenAI MCP integration currently accepts **image URLs** (not raw base64). Send the URL as `type: "input_text"`.
 
 ```python
 response = client.responses.create(

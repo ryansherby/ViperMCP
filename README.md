@@ -5,7 +5,7 @@
 [![Made with FastMCP](https://img.shields.io/badge/MCP-FastMCP-4B9CE2)](#-setup)
 [![ViperGPT Inspired](https://img.shields.io/badge/Inspiration-ViperGPT-6f42c1)](https://viper.cs.columbia.edu/)
 [![GPU Ready](https://img.shields.io/badge/GPU-Enabled-0aa344)](#-installation)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](#-contributions)
+[![License](https://img.shields.io/badge/License-Commons-blue.svg)](#-contributions)
 
 ViperMCP is a **mixture-of-experts (MoE) visual question‑answering** (VQA) server that exposes **streamable MCP tools** for:
 

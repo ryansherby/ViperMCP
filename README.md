@@ -113,6 +113,13 @@ http://0.0.0.0:8000/mcp?apiKey=sk-proj-XXXXXXXXXXXXXXXXXXXX
 Pass images as **base64** (shown) or as **URLs**:
 
 ```python
+image_path='./your_image.png'
+img_byte_arr = io.BytesIO()
+image.save(img_byte_arr, format='PNG')
+img_byte_arr.seek(0)
+image_bytes = img_byte_arr.read()
+img_b64_string = base64.b64encode(image_bytes).decode('utf-8')
+
 async with client:
     await client.ping()
 
@@ -121,13 +128,13 @@ async with client:
     query = await client.call_tool(
         "viper_query",
         {"query": "how many muffins can each kid have for it to be fair?"},
-        {"image": f"data:image/png;base64,{image_base64_string}"},
+        {"image": f"data:image/png;base64,{img_b64_string}"},
     )
 
     task = await client.call_tool(
         "viper_task",
         {"task": "return a mask of all the people in the image"},
-        {"image": f"data:image/png;base64,{image_base64_string}"},
+        {"image": f"data:image/png;base64,{img_b64_string}"},
     )
 ```
 
